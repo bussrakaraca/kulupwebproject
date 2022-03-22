@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+    <link href="stylsheet/default.css" rel="stylesheet" />
+    <link href="stylsheet/fonts.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+            <div id="cıkıs">
+           <p> <asp:Label ID="Label1" runat="server"></asp:Label>   
+               </p>
+            </div>
+				<p> <a href="Default.aspx" rel="nofollow"></a></p>
+            
+			<div id="logo">
+				<h1><a href="Default.aspx"><img src="images/logo.fw.png" /></a></h1>
+				<p> <a href="#" rel="nofollow"></a></p>
+                
+			</div>
+		</div>
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="Default.aspx" accesskey="1" title="">Anasayfa</a></li>
+                <li><a href="Profilim.aspx" accesskey="1" title="">Profilim</a></li>
+				<li><a href="Kuluphakkinda.aspx" accesskey="1" title="">Kulüp Hakkında</a></li>
+				<li><a href="uyelistesi.aspx" accesskey="2" title="">Uye Listesi</a></li>
+				<li><a href="galeri.aspx" accesskey="3" title="">Galeri</a></li>
+				
+			</ul>
+		</div>
+        <div></div>
+	</div>
+	<div id="page" class="container">
+		<div><a href="#" class="image image-full">
+            <img src="images/banner.jpg" /></a></div>
+        
+		<div class="column1">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+		</div>
+		<div itemid="Giris" class="column4">
+            <div class="title">
+				<span class="byline">
+                    <asp:HyperLink ID="HyperLink2" runat="server" Text="Yönetici Paneli" NavigateUrl="~/admin/Default.aspx">Yönetici Paneli</asp:HyperLink>
+               </span>
+                </div>
+            <div id="Login1" runat="server">
+			<div runat="server" class="title" id="Giris">
+				<h2>Giriş</h2>
+			</div>
+			
+			<p>
+                <asp:Label ID="Label2" runat="server" Text="E-mail"></asp:Label>
+                <asp:TextBox ID="TextBox1" runat="server" style="margin-left: 7px"></asp:TextBox>
+</p>
+            <p>
+                <asp:Label ID="Label3" runat="server" Text="Şifre"></asp:Label>
+                <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" style="margin-left: 18px"></asp:TextBox>
+            </p>
+            <p>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/sifremiunuttum.aspx" Target="_blank" ToolTip="Şifremi Unuttum">Şifreni mi unuttun?</asp:HyperLink>
+            </p>
+            <p>
+                &nbsp;</p>
+            <p>
+            <asp:Button ID="Button1" CssClass="button" runat="server" Text="Giriş" OnClick="Button1_Click" />
+                <asp:Button ID="Button2" CssClass="button" runat="server" Text="Kaydol" OnClick="Button2_Click1" />
+            </p>
+            <p>
+                <asp:Label ID="Label4" runat="server"></asp:Label></p>
+		    <br /></div>
+		<div  style="margin-top:35px;" class="title">
+            <h2>Takvim </h2>
+		</div>
+            <p>
+                <div ><embed src="http://saat.bbs.tr/takvim/takvim_02.swf" quality="high" wmode="transparent" width="250" height="250" name="superpimper"
+align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+<noscript><a href="http://www.saat.bbs.tr" target="_blank"></a><br>Takvim Online<a href="http://www.saat.bbs.tr">Takvim</a></noscript>
+            
+		</div></p>
+        
+        
+	</div>
+        </div>
+	<div id="portfolio-wrapper">
+        
+		<div id="portfolio" class="container">
+<p><a href="http://blog.ekarakus.com" rel="nofollow">blog.ekarakus</a></p>
+        <p><a href="http://proje.okulsitesi.info" rel="nofollow">proje.okulsitesi</a></p>
+        <p><a href="http://www.szorlutml.k12.tr" rel="nofollow">szorlutml.k12</a></p>
+			<div class="title">
+				<h2></h2>
+				<span class="byline">
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click1">Çıkış</asp:LinkButton></span> </div>
+
+		</div>
+	</div>
+
+<div id="footer">
+
+	<p>&copy; 2014 Büşra Karaca Tarafından Yapılmıştır </p><p><a href="Default.aspx" rel="nofollow">Sosyal Yardımlaşma ve Dayanışma Kulübü</a></p>
+</div>
+    </form>
+</body>
+</html>
